@@ -1,0 +1,26 @@
+{
+  "name": "Feeder",
+  "authors": [
+    "amir <amirmessi2010@gmail.com>"
+  ],
+  "description": "Rss feed reader",
+  "main": "feeder.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "rss",
+    "feed",
+    "feeder",
+    "reader"
+  ],
+  "license": "MIT",
+  "homepage": "https://myresearchesblog.wordpress.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
