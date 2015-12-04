@@ -3,7 +3,16 @@
 * */
 
 angular.module('feeder', [])
-    .directive('feed',['$compile','$http','$sce','$templateCache','feedCache',function($compile,$http,$sce,$templateCache,feedCache){
+    .provider('feederApiConfig', function () {
+        this.setUrl = function (url){
+            this.url = url;
+        };
+
+        this.$get = function(){
+            return this;
+        };
+    })
+    .directive('feed',['$compile','$http','$sce','$templateCache','feedCache', 'feederApiConfig',function($compile,$http,$sce,$templateCache,feedCache, feederApiConfig){
     return {
         restrict: 'E',
         scope: {
@@ -52,7 +61,7 @@ angular.module('feeder', [])
             else {
                 return $http({
                     method: 'GET',
-                    url : '/api/feeds',
+                    url : feederApiConfig.url,
                     params: params
                 }).then(function(response){
                     templateHtml = $templateCache.get(attrs.feedTemplateUrl);
