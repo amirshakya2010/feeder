@@ -5,5 +5,7 @@
 
 ## Usage
   ## Used as directive
-  -  '<feed url = "https://myresearchesblog.wordpress.com/feed" feed-template-url = "path/to/template.html" no-result-text="Message for no result"></feed>'
+  ```
+  '<feed url = "https://myresearchesblog.wordpress.com/feed" feed-template-url = "path/to/template.html" no-result-text="Message for no result"></feed>'
+  ```
   
