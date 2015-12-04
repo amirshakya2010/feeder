@@ -6,7 +6,7 @@
 ## Usage
   ## Config api url
   ```
-   .config([
+   app.config([
     'feederApiConfigProvider',
     function(feederApiConfigProvider) {
         feederApiConfigProvider.setUrl('/api/feeds');
