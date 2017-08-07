@@ -65,7 +65,7 @@ angular.module('feeder', [])
                     params: params
                 }).then(function(response){
                     templateHtml = $templateCache.get(attrs.feedTemplateUrl);
-                    renderTemplate(templateHtml[1], response.data);
+                    renderTemplate(templateHtml, response.data);
                 }).catch(function(err){
                     var noResultHtml = "<div>{{ noResultText }}</div>";
                     renderTemplate(noResultHtml, null);
